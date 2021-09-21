@@ -1,0 +1,8 @@
+<form (ngSubmit)="onSubmit(contactForm);" #contactForm="ngForm">
+   <input matInput placeholder="title" #nombre maxlength="80" [(ngModel)]="ContactModel.title" name="title" required>
+ <input matInput placeholder="url" #nombre maxlength="80" [(ngModel)]="ContactModel.url" name="url" required>
+  <input matInput placeholder="description" #nombre maxlength="80" [(ngModel)]="ContactModel.description" name="description" required>
+
+   <button  [disabled]="!contactForm.form.valid">Enviar</button>
+</form>
+{{dato}}
